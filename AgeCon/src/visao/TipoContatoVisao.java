@@ -8,7 +8,7 @@ public class TipoContatoVisao extends FormPadrao {
     
     //Construtor
     public TipoContatoVisao(){
-        setTitle("Tipo de contato");
+        setTitle("Cadastro de Tipo de contato");
     }
 
     @Override

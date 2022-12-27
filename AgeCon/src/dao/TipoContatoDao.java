@@ -3,13 +3,14 @@ package dao;
 import interfaces.InterfaceDao;
 import java.sql.SQLException;
 import javax.swing.JComboBox;
+import modelo.TipoContatoModelo;
 
 
 public class TipoContatoDao implements InterfaceDao{
 
     @Override
     public void salvarDao(Object... valor) {
-
+        TipoContatoModelo tcm = (TipoContatoModelo)valor[0];
     }
 
     @Override
