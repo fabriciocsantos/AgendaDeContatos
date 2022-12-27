@@ -1,13 +1,30 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package dao;
 
-/**
- *
- * @author Fabrício
- */
-public class TipoContatoDao {
+import interfaces.InterfaceDao;
+import java.sql.SQLException;
+import javax.swing.JComboBox;
+
+
+public class TipoContatoDao implements InterfaceDao{
+
+    @Override
+    public void salvarDao(Object... valor) {
+
+    }
+
+    @Override
+    public void excluirDao(int id) {
+
+    }
+
+    @Override
+    public void consultarDao(Object... valor) throws SQLException {
+
+    }
+
+    @Override
+    public void carregarComboBoxDao(JComboBox itens) throws SQLException {
+
+    }
     
 }
