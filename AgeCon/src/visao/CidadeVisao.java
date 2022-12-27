@@ -38,4 +38,9 @@ public class CidadeVisao extends FormPadrao{
         jtfCep.setBounds(110,80,200,25);
         jpnFormulario.add(jtfCep);
     }
+
+    @Override
+    public void salvarVisao() {
+
+    }
 }

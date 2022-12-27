@@ -13,4 +13,9 @@ public class TipoContatoVisao extends FormPadrao {
     public void inicializarComponentes() {
 
     }
+
+    @Override
+    public void salvarVisao() {
+
+    }
 }

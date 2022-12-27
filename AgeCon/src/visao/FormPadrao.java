@@ -8,7 +8,7 @@ abstract public class FormPadrao extends javax.swing.JInternalFrame {
     
     //Métodos abstratos que serão implementados pela classe filha 
     abstract public void inicializarComponentes();
-    
+    abstract public void salvarVisao();
     
     //Variáveis para os componentes do painel de Consulta 
     JLabel jlConsulta;

@@ -62,4 +62,9 @@ public class ContatoVisao extends FormPadrao {
         
         
     }
+
+    @Override
+    public void salvarVisao() {
+
+    }
 }

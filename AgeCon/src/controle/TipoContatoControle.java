@@ -1,13 +1,23 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package controle;
 
-/**
- *
- * @author Fabrício
- */
-public class TipoContatoControle {
+import interfaces.InterfaceControle;
+
+
+public class TipoContatoControle implements InterfaceControle {
+
+    @Override
+    public void salvarControle(Object... valor) {
+
+    }
+
+    @Override
+    public void excluirControle(int id) {
+
+    }
+
+    @Override
+    public void carregarComboBox() {
+
+    }
     
 }

@@ -25,4 +25,9 @@ public class BairroVisao extends FormPadrao {
         jcbBairro.setBounds(9,80,250,25);
         jpnFormulario.add(jcbBairro);
     }
+
+    @Override
+    public void salvarVisao() {
+
+    }
 }
