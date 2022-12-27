@@ -7,7 +7,7 @@ public class TipoContatoControle implements InterfaceControle {
 
     @Override
     public void salvarControle(Object... valor) {
-
+        
     }
 
     @Override

@@ -1,5 +1,7 @@
 package visao;
 
+import controle.TipoContatoControle;
+
 
 public class TipoContatoVisao extends FormPadrao {
     
@@ -13,9 +15,12 @@ public class TipoContatoVisao extends FormPadrao {
     public void inicializarComponentes() {
 
     }
+    
+    //Instancia de controle
+    TipoContatoControle tcc = new TipoContatoControle();
 
     @Override
     public void salvarVisao() {
-
+         tcc.salvarControle(jtfId.getText(), jtfDescricao.getText());
     }
 }
