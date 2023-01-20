@@ -29,7 +29,10 @@ public class TipoContatoDao implements InterfaceDao{
         try {
             //Preparando e manipulando os dados
             stm = (PreparedStatementWrapper) ConexaoBanco.abreConexao().prepareStatement(sql);   
+            
             stm.setString(1, tcm.getDescricao());
+            if(tcm.getId() > 0)stm.setInt(2,tcm.getId());
+            
             stm.execute();
             stm.close();
             JOptionPane.showMessageDialog(null,"Gravado");
