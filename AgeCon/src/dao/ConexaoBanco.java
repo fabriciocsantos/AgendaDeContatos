@@ -17,7 +17,7 @@ public class ConexaoBanco {
         try {
             Class.forName(driveClass);
             con = DriverManager.getConnection(url, user, senha);
-            JOptionPane.showMessageDialog(null, "Conectado!");
+//            JOptionPane.showMessageDialog(null, "Conectado!");
         } catch (Exception erro) {
             JOptionPane.showMessageDialog(null, "Não foi possivel conectar: " + erro);
         }

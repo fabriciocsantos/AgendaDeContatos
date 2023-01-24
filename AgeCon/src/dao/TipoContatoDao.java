@@ -1,6 +1,6 @@
-package dao;
+ package dao;
 
-import com.mysql.cj.jdbc.PreparedStatementWrapper;
+import java.sql.PreparedStatement;
 import interfaces.InterfaceDao;
 import java.sql.SQLException;
 import javax.swing.JComboBox;
@@ -11,7 +11,7 @@ import modelo.TipoContatoModelo;
 public class TipoContatoDao implements InterfaceDao{
     
     String sql;
-    PreparedStatementWrapper stm;
+    PreparedStatement stm;
     
     @Override
     public void salvarDao(Object... valor) {
@@ -23,21 +23,23 @@ public class TipoContatoDao implements InterfaceDao{
             sql = "INSERT INTO tipo_contato (descricao) VALUES (?)";
         }else {
             //alterar
-            sql = "UPTADE tipo_contato SET descricao=? WHERE it_tipo_contato=?";
+            sql = "UPTADE tipo_contato SET descricao=? WHERE id_tipo_contato=?";
         }
         
         try {
             //Preparando e manipulando os dados
-            stm = (PreparedStatementWrapper) ConexaoBanco.abreConexao().prepareStatement(sql);   
+            stm = ConexaoBanco.abreConexao().prepareStatement(sql);   
             
             stm.setString(1, tcm.getDescricao());
-            if(tcm.getId() > 0)stm.setInt(2,tcm.getId());
+            if(tcm.getId() > 0)
+                stm.setInt(2,tcm.getId());
             
             stm.execute();
             stm.close();
-            JOptionPane.showMessageDialog(null,"Gravado");
+            JOptionPane.showMessageDialog(null,"Registro Gravado!");
             
         } catch (Exception e) {
+            JOptionPane.showMessageDialog(null,"Erro. " + e);
         }
     }
 
