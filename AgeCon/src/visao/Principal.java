@@ -1,9 +1,11 @@
 package visao;
 
 import javax.swing.JFrame;
+import util.PosicaoFormulario;
 
 public class Principal extends javax.swing.JFrame {
-
+    
+    PosicaoFormulario form = new PosicaoFormulario();
     
     public Principal() {
         initComponents();
@@ -118,9 +120,8 @@ public class Principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jmiContatosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiContatosActionPerformed
-        ContatoVisao tela = new ContatoVisao();
-        jDesktop.add(tela);
-        tela.setVisible(true);
+        ContatoVisao tela;
+        form.abrirFormulario(tela = new ContatoVisao(), jDesktop);
     }//GEN-LAST:event_jmiContatosActionPerformed
 
     private void jmCadastrosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmCadastrosActionPerformed
@@ -128,21 +129,18 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jmCadastrosActionPerformed
 
     private void jmiCidadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiCidadeActionPerformed
-        CidadeVisao tela = new CidadeVisao();
-        jDesktop.add(tela);
-        tela.setVisible(true);
+        CidadeVisao tela;
+        form.abrirFormulario(tela = new CidadeVisao(), jDesktop);
     }//GEN-LAST:event_jmiCidadeActionPerformed
 
     private void jmiBairroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiBairroActionPerformed
-        BairroVisao tela = new BairroVisao();
-        jDesktop.add(tela);
-        tela.setVisible(true);
+        BairroVisao tela;
+        form.abrirFormulario(tela = new BairroVisao(), jDesktop);
     }//GEN-LAST:event_jmiBairroActionPerformed
 
     private void jmiTipoContatoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiTipoContatoActionPerformed
-        TipoContatoVisao tela = new TipoContatoVisao();
-        jDesktop.add(tela);
-        tela.setVisible(true);
+        TipoContatoVisao tela;
+        form.abrirFormulario(tela = new TipoContatoVisao(), jDesktop);
     }//GEN-LAST:event_jmiTipoContatoActionPerformed
 
     
