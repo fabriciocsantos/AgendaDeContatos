@@ -2,6 +2,7 @@ package visao;
 
 import javax.swing.JLabel;
 import javax.swing.JTextField;
+import javax.swing.table.DefaultTableModel;
 
 public class ContatoVisao extends FormPadrao {
     
@@ -66,5 +67,16 @@ public class ContatoVisao extends FormPadrao {
     @Override
     public void salvarVisao() {
 
+    }
+
+    @Override
+    public void criarTabela() {
+        tabela = utilTabela.criarTabela(
+                jpnConsulta, 
+                new Object[] {60, 200, 100, 150, 50, 150},
+                new Object[]{"centro","esquerda","esquerda","esquerda","esquerda","esquerda"}, 
+                new Object[]{"ID", "Descrição", "Apelido", "Email", "DDD", "Telefone"}
+        );
+        modelo = (DefaultTableModel) tabela.getModel();
     }
 }

@@ -1,6 +1,7 @@
 package visao;
 
 import controle.TipoContatoControle;
+import javax.swing.table.DefaultTableModel;
 
 
 public class TipoContatoVisao extends FormPadrao {
@@ -22,5 +23,16 @@ public class TipoContatoVisao extends FormPadrao {
     @Override
     public void salvarVisao() {
          tcc.salvarControle(jtfId.getText(), jtfDescricao.getText());
+    }
+
+    @Override
+    public void criarTabela() {
+        tabela = utilTabela.criarTabela(
+                jpnConsulta, 
+                new Object[] {60, 620},
+                new Object[]{"centro","esquerda"}, 
+                new Object[]{"ID", "Descrição"}
+        );
+        modelo = (DefaultTableModel) tabela.getModel();
     }
 }

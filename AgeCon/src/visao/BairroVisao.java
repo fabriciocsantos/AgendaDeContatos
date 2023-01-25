@@ -2,6 +2,7 @@ package visao;
 
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
+import javax.swing.table.DefaultTableModel;
 
 
 public class BairroVisao extends FormPadrao {
@@ -29,5 +30,16 @@ public class BairroVisao extends FormPadrao {
     @Override
     public void salvarVisao() {
 
+    }
+
+    @Override
+    public void criarTabela() {
+        tabela = utilTabela.criarTabela(
+                jpnConsulta, 
+                new Object[] {60, 450, 200},
+                new Object[]{"centro","esquerda","direita"}, 
+                new Object[]{"ID", "Descrição","Cidade"}
+        );
+        modelo = (DefaultTableModel) tabela.getModel();
     }
 }
