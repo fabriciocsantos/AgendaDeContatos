@@ -59,7 +59,7 @@ public class TipoContatoDao implements InterfaceDao{
         if("".equals((String)valor[0])){
             sql = "SELECT * FROM tipo_contato";
         }else{
-            sql = "SELECT * FROM tipo_contato WHERE descricao LIKE '%" + valor[0] + "'%'";
+            sql = "SELECT * FROM tipo_contato WHERE descricao LIKE '%" + valor[0] + "%'";
         }
        
         stm = ConexaoBanco.abreConexao().prepareStatement(sql);   
