@@ -13,7 +13,7 @@ abstract public class FormPadrao extends javax.swing.JInternalFrame {
     abstract public void inicializarComponentes();
     abstract public void salvarVisao();
     abstract public void criarTabela();
-    abstract public void consutaVisao();
+    abstract public void consultaVisao();
     
     //Atributos para criação da tabela
     JTable tabela;  
@@ -240,6 +240,7 @@ abstract public class FormPadrao extends javax.swing.JInternalFrame {
         habilitaBotoes(true);
         habilitaCampos(false);
         salvarVisao();
+        consultaVisao();
     }//GEN-LAST:event_jbSalvarActionPerformed
 
     private void jbAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAlterarActionPerformed

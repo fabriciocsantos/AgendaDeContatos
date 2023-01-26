@@ -56,7 +56,12 @@ public class TipoContatoDao implements InterfaceDao{
         
         DefaultTableModel tabela = (DefaultTableModel) valor[1];
         
-        sql = "SELECT * FROM tipo_contato";
+        if("".equals((String)valor[0])){
+            sql = "SELECT * FROM tipo_contato";
+        }else{
+            sql = "SELECT * FROM tipo_contato WHERE descricao LIKE '%" + valor[0] + "'%'";
+        }
+       
         stm = ConexaoBanco.abreConexao().prepareStatement(sql);   
         resultado = stm.executeQuery();
         

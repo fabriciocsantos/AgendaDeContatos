@@ -44,7 +44,7 @@ public class BairroVisao extends FormPadrao {
     }
 
     @Override
-    public void consutaVisao() {
+    public void consultaVisao() {
 
     }
 }

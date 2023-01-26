@@ -81,7 +81,7 @@ public class ContatoVisao extends FormPadrao {
     }
 
     @Override
-    public void consutaVisao() {
+    public void consultaVisao() {
   
     }
 }

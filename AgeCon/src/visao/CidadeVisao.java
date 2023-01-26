@@ -57,7 +57,7 @@ public class CidadeVisao extends FormPadrao{
     }
 
     @Override
-    public void consutaVisao() {
+    public void consultaVisao() {
 
     }
 }
