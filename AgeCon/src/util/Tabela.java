@@ -22,9 +22,9 @@ public class Tabela {
         DefaultTableModel modeloTabela = (DefaultTableModel) tabela.getModel();    
 
     
-        tabela.setFont(new Font("Arial", Font.BOLD, 16));
+        tabela.setFont(new Font("Arial", Font.BOLD, 12));
         JScrollPane jsp = new JScrollPane(tabela);
-        tabela.setRowHeight(50);
+        tabela.setRowHeight(30);
         jsp.setBounds(10, 40, 680, 120);
         jsp.setVisible(true);
         jpn.add(jsp);

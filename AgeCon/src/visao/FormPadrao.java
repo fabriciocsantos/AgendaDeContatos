@@ -13,6 +13,7 @@ abstract public class FormPadrao extends javax.swing.JInternalFrame {
     abstract public void inicializarComponentes();
     abstract public void salvarVisao();
     abstract public void criarTabela();
+    abstract public void consutaVisao();
     
     //Atributos para criação da tabela
     JTable tabela;  

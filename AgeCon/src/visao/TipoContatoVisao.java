@@ -10,6 +10,7 @@ public class TipoContatoVisao extends FormPadrao {
     //Construtor
     public TipoContatoVisao(){
         setTitle("Cadastro de Tipo de contato");
+        consutaVisao();
     }
 
     @Override
@@ -34,5 +35,11 @@ public class TipoContatoVisao extends FormPadrao {
                 new Object[]{"ID", "Descrição"}
         );
         modelo = (DefaultTableModel) tabela.getModel();
+    }
+
+    @Override
+    public void consutaVisao() {
+         modelo.setNumRows(0);
+         tcc.consultarControle(jtfConsulta.getText(), modelo);
     }
 }

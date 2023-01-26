@@ -79,4 +79,9 @@ public class ContatoVisao extends FormPadrao {
         );
         modelo = (DefaultTableModel) tabela.getModel();
     }
+
+    @Override
+    public void consutaVisao() {
+  
+    }
 }
