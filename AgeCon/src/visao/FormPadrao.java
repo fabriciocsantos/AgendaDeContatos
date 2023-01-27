@@ -2,6 +2,8 @@ package visao;
 
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import javax.swing.JLabel;
 import javax.swing.JTable;
 import javax.swing.JTextField;
@@ -16,6 +18,7 @@ abstract public class FormPadrao extends javax.swing.JInternalFrame {
     abstract public void salvarVisao();
     abstract public void criarTabela();
     abstract public void consultaVisao();
+    abstract public void atualizarFormulario(); 
     
     //Atributos para criação da tabela
     JTable tabela;  
@@ -55,6 +58,14 @@ abstract public class FormPadrao extends javax.swing.JInternalFrame {
                 new KeyAdapter(){
                    public void keyReleased(KeyEvent e){
                        consultaVisao();
+                   } 
+                }
+        );
+        
+             tabela.addMouseListener(
+                new MouseAdapter(){
+                   public void mouseClicked(MouseEvent e){
+                       atualizarFormulario();
                    } 
                 }
         );

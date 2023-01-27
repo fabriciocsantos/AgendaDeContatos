@@ -26,7 +26,7 @@ public class TipoContatoDao implements InterfaceDao{
             sql = "INSERT INTO tipo_contato (descricao) VALUES (?)";
         }else {
             //alterar
-            sql = "UPTADE tipo_contato SET descricao=? WHERE id_tipo_contato=?";
+            sql = "UPDATE tipo_contato SET descricao=? WHERE id_tipo_contato=?";
         }
         
         try {
