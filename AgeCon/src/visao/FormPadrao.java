@@ -62,13 +62,24 @@ abstract public class FormPadrao extends javax.swing.JInternalFrame {
                 }
         );
         
-             tabela.addMouseListener(
+        //Evento de escuta para o click do mouse na tabela
+        tabela.addMouseListener(
                 new MouseAdapter(){
                    public void mouseClicked(MouseEvent e){
                        atualizarFormulario();
                    } 
                 }
         );
+        
+        //Evento de escuta para as teclas, seta para cima e para baixo
+        tabela.addKeyListener(
+                new KeyAdapter(){
+                   public void keyReleased(KeyEvent e){
+                       atualizarFormulario();
+                   } 
+                }
+        );
+       
     }
 
     
