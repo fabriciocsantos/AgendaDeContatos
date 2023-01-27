@@ -30,7 +30,7 @@ public class TipoContatoControle implements InterfaceControle {
 
     @Override
     public void excluirControle(int id) {
-
+        tcd.excluirDao(id);
     }
 
     @Override

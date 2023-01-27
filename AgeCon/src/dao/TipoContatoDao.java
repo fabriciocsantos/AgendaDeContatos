@@ -48,7 +48,18 @@ public class TipoContatoDao implements InterfaceDao{
 
     @Override
     public void excluirDao(int id) {
-        
+          sql = "DELETE FROM tipo_contato WHERE id=?";
+        try {
+            stm = ConexaoBanco.abreConexao().prepareStatement(sql);   
+            
+            stm.setInt(1, id);
+            stm.execute();
+            stm.close();
+            
+            JOptionPane.showMessageDialog(null, "Registro Excluido Com Sucesso.");
+        }catch(SQLException e){
+            JOptionPane.showMessageDialog(null, "ERRO Ao Excluir o Registro. " + e);
+        }
     }
 
     @Override

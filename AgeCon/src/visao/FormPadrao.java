@@ -5,6 +5,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
@@ -19,6 +20,7 @@ abstract public class FormPadrao extends javax.swing.JInternalFrame {
     abstract public void criarTabela();
     abstract public void consultaVisao();
     abstract public void atualizarFormulario(); 
+    abstract public void excluirVisao();
     
     //Atributos para criação da tabela
     JTable tabela;  
@@ -119,6 +121,11 @@ abstract public class FormPadrao extends javax.swing.JInternalFrame {
 
         jbExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/remove.png"))); // NOI18N
         jbExcluir.setText("Excluir");
+        jbExcluir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbExcluirActionPerformed(evt);
+            }
+        });
 
         jbSalvar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/salvar.png"))); // NOI18N
         jbSalvar.setText("Salvar");
@@ -281,6 +288,17 @@ abstract public class FormPadrao extends javax.swing.JInternalFrame {
         
         jtfDescricao.requestFocus();
     }//GEN-LAST:event_jbAlterarActionPerformed
+
+    private void jbExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbExcluirActionPerformed
+        if(JOptionPane.showConfirmDialog(null,  "Confirma Exclusão?","Confirmação", JOptionPane.YES_NO_OPTION,JOptionPane.QUESTION_MESSAGE)==JOptionPane.YES_OPTION){
+            excluirVisao();
+            consultaVisao();
+            limpaCampos();
+        }else{
+            JOptionPane.showMessageDialog(null,"Exclusão Cancelada" );
+        }
+        
+    }//GEN-LAST:event_jbExcluirActionPerformed
     
     //Método para habilitar e desabilitar botões.
     public void habilitaBotoes(boolean estado){
