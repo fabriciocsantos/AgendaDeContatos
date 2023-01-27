@@ -1,5 +1,7 @@
 package visao;
 
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import javax.swing.JLabel;
 import javax.swing.JTable;
 import javax.swing.JTextField;
@@ -48,6 +50,14 @@ abstract public class FormPadrao extends javax.swing.JInternalFrame {
         jtfConsulta.setBounds(70,5,620,25);
         jpnConsulta.add(jtfConsulta);
         
+        //Evento que verifica o cada caractere digitado no JTFConsulta
+        jtfConsulta.addKeyListener(
+                new KeyAdapter(){
+                   public void keyReleased(KeyEvent e){
+                       consultaVisao();
+                   } 
+                }
+        );
     }
 
     
