@@ -1,19 +1,18 @@
 package visao;
 
-import javax.swing.JComboBox;
-import javax.swing.JLabel;
-import javax.swing.table.DefaultTableModel;
 
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import javax.swing.table.DefaultTableModel;
 
 public class BairroVisao extends FormPadrao {
     
     JLabel jlBairro;
-    JComboBox jcbBairro;
+    JTextField jcbBairro;
     
     //Construtor
     public BairroVisao(){
         setTitle("Cadastro Bairro");
-        
     }
 
     @Override
@@ -22,14 +21,17 @@ public class BairroVisao extends FormPadrao {
         jlBairro.setBounds(9,60,50,25);
         jpnFormulario.add(jlBairro);
         
-        jcbBairro = new JComboBox();
+        jcbBairro = new JTextField();
         jcbBairro.setBounds(9,80,250,25);
         jpnFormulario.add(jcbBairro);
     }
-
+    
+    //Instancia de controle
+    
+    
     @Override
     public void salvarVisao() {
-
+     
     }
 
     @Override
@@ -45,16 +47,16 @@ public class BairroVisao extends FormPadrao {
 
     @Override
     public void consultaVisao() {
-
+         
     }
 
     @Override
     public void atualizarFormulario() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+       
     }
 
     @Override
     public void excluirVisao() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        
     }
 }

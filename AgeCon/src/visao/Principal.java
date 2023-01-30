@@ -128,20 +128,20 @@ public class Principal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jmCadastrosActionPerformed
 
-    private void jmiCidadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiCidadeActionPerformed
-        CidadeVisao tela;
-        form.abrirFormulario(tela = new CidadeVisao(), jDesktop);
-    }//GEN-LAST:event_jmiCidadeActionPerformed
+    private void jmiTipoContatoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiTipoContatoActionPerformed
+        TipoContatoVisao tela;
+        form.abrirFormulario(tela = new TipoContatoVisao(), jDesktop);
+    }//GEN-LAST:event_jmiTipoContatoActionPerformed
 
     private void jmiBairroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiBairroActionPerformed
         BairroVisao tela;
         form.abrirFormulario(tela = new BairroVisao(), jDesktop);
     }//GEN-LAST:event_jmiBairroActionPerformed
 
-    private void jmiTipoContatoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiTipoContatoActionPerformed
-        TipoContatoVisao tela;
-        form.abrirFormulario(tela = new TipoContatoVisao(), jDesktop);
-    }//GEN-LAST:event_jmiTipoContatoActionPerformed
+    private void jmiCidadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiCidadeActionPerformed
+        CidadeVisao tela;
+        form.abrirFormulario(tela = new CidadeVisao(), jDesktop);
+    }//GEN-LAST:event_jmiCidadeActionPerformed
 
     
     public static void main(String args[]) {
