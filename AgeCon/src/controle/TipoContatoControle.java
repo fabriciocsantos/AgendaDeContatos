@@ -34,11 +34,6 @@ public class TipoContatoControle implements InterfaceControle {
     }
 
     @Override
-    public void carregarComboBox() {
-
-    }
-
-    @Override
     public void consultarControle(Object... valor) {
         try {
             tcd.consultarDao(valor);
