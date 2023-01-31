@@ -21,7 +21,7 @@ abstract public class FormPadrao extends javax.swing.JInternalFrame {
     abstract public void consultaVisao();
     abstract public void atualizarFormulario(); 
     abstract public void excluirVisao();
-    
+     
     //Atributos para criação da tabela
     JTable tabela;  
     DefaultTableModel modelo = new DefaultTableModel();
@@ -319,7 +319,7 @@ abstract public class FormPadrao extends javax.swing.JInternalFrame {
     public void limpaCampos(){
         jtfDescricao.setText("");
     }
-
+     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

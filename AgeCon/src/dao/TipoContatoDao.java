@@ -4,7 +4,6 @@ import java.sql.PreparedStatement;
 import interfaces.InterfaceDao;
 import java.sql.SQLException;
 import java.sql.ResultSet;
-import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import modelo.TipoContatoModelo;
@@ -85,11 +84,6 @@ public class TipoContatoDao implements InterfaceDao{
            );
         }
         stm.close();
-    }
-
-    @Override
-    public void carregarComboBoxDao(JComboBox itens) throws SQLException {
-
     }
     
 }
