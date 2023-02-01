@@ -2,13 +2,14 @@ package dao;
 
 import interfaces.InterfaceDao;
 import java.sql.SQLException;
+import modelo.BairroModelo;
 
 
 public class BairroDao implements InterfaceDao {
 
     @Override
     public void salvarDao(Object... valor) {
-
+         BairroModelo bm =  (BairroModelo)valor[0];
     }
 
     @Override
