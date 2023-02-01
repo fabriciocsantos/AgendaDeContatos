@@ -280,6 +280,7 @@ abstract public class FormPadrao extends javax.swing.JInternalFrame {
         habilitaCampos(false);
         salvarVisao();
         consultaVisao();
+        limpaCampos();
     }//GEN-LAST:event_jbSalvarActionPerformed
 
     private void jbAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAlterarActionPerformed
