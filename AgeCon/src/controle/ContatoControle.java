@@ -1,8 +1,10 @@
+
 package controle;
 
 import interfaces.InterfaceControle;
 
-public class Bairro implements InterfaceControle {
+
+public class ContatoControle implements InterfaceControle {
 
     @Override
     public void salvarControle(Object... valor) {
@@ -18,5 +20,5 @@ public class Bairro implements InterfaceControle {
     public void consultarControle(Object... valor) {
 
     }
-    
+      
 }

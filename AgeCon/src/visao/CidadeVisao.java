@@ -1,6 +1,6 @@
 package visao;
 
-import javax.swing.JComboBox;
+import controle.CidadeControle;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
@@ -10,7 +10,7 @@ public class CidadeVisao extends FormPadrao{
     JLabel jlUf;
     JLabel jlCep;
     
-    JComboBox jcbUf;
+    JTextField jcbUf;
     JTextField jtfCep;
     
     //Construtor
@@ -26,7 +26,7 @@ public class CidadeVisao extends FormPadrao{
         jlUf.setBounds(9,60,50,25);
         jpnFormulario.add(jlUf);
         
-        jcbUf = new JComboBox();
+        jcbUf = new JTextField();
         jcbUf.setBounds(9,80,70,25);
         jpnFormulario.add(jcbUf);
         
@@ -39,10 +39,13 @@ public class CidadeVisao extends FormPadrao{
         jtfCep.setBounds(110,80,200,25);
         jpnFormulario.add(jtfCep);
     }
+    
+    //Instancia de Controle
+    CidadeControle cic = new CidadeControle();
 
     @Override
     public void salvarVisao() {
-
+        cic.salvarControle(jtfId.getText(), jtfDescricao.getText(),jcbUf.getText(), jtfCep.getText());
     }
 
     @Override

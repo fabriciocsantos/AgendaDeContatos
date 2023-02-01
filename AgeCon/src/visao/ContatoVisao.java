@@ -1,5 +1,6 @@
 package visao;
 
+import controle.ContatoControle;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
@@ -63,9 +64,12 @@ public class ContatoVisao extends FormPadrao {
 
     }
     
+    //Instancia de Controle
+    ContatoControle  cc = new ContatoControle();
+    
     @Override
     public void salvarVisao() {
-
+        cc.salvarControle(jtfId.getText(), jtfDescricao.getText(), jtfApelido.getText(), jtfEmail.getText(),jtfDdd.getText(),jtfTelefone.getText());
     }
 
     @Override

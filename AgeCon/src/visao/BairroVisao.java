@@ -1,6 +1,7 @@
 package visao;
 
 
+import controle.BairroControle;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
@@ -27,11 +28,11 @@ public class BairroVisao extends FormPadrao {
     }
     
     //Instancia de controle
-    
+    BairroControle bc = new BairroControle();
     
     @Override
     public void salvarVisao() {
-     
+     bc.salvarControle(jtfId.getText(), jtfDescricao.getText(), jcbBairro.getText());
     }
 
     @Override

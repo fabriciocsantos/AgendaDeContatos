@@ -2,8 +2,7 @@ package controle;
 
 import interfaces.InterfaceControle;
 
-
-public class Cidade implements InterfaceControle{
+public class BairroControle implements InterfaceControle {
 
     @Override
     public void salvarControle(Object... valor) {
