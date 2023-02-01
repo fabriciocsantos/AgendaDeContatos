@@ -2,6 +2,6 @@
 package controle;
 
 
-public class Contato {
-    
+public class Contato implements IntefaceControle {
+      
 }
