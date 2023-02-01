@@ -1,5 +1,6 @@
 package controle;
 
+import dao.CidadeDao;
 import interfaces.InterfaceControle;
 import modelo.CidadeModelo;
 
@@ -7,6 +8,7 @@ import modelo.CidadeModelo;
 public class CidadeControle implements InterfaceControle{
     
     CidadeModelo cim = new CidadeModelo();  
+    CidadeDao cid = new CidadeDao();
     
     @Override
     public void salvarControle(Object... valor) {
@@ -16,7 +18,9 @@ public class CidadeControle implements InterfaceControle{
         cim.setCep((String)valor[3]);
         
         //Enviar informações para o DAO
-       
+        
+        cid.salvarDao(cim);
+        
     }
 
     @Override

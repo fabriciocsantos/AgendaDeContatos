@@ -1,12 +1,14 @@
 package controle;
 
+import dao.ContatoDao;
 import interfaces.InterfaceControle;
 import modelo.ContatoModelo;
 
 public class ContatoControle implements InterfaceControle {
 
     ContatoModelo cm = new ContatoModelo();
-
+    ContatoDao cd = new ContatoDao();
+    
     @Override
     public void salvarControle(Object... valor) {
         cm.setId((int) valor[0]);
@@ -17,6 +19,8 @@ public class ContatoControle implements InterfaceControle {
         cm.setTelefone((String) valor[5]);
         
         //Enviar informações para o DAO
+        
+        cd.salvarDao(cm);
         
     }
 

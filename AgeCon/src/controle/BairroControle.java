@@ -1,11 +1,13 @@
 package controle;
 
+import dao.BairroDao;
 import interfaces.InterfaceControle;
 import modelo.BairroModelo;
 
 public class BairroControle implements InterfaceControle {
     
     BairroModelo bm = new BairroModelo();
+    BairroDao bd = new BairroDao();
     
     @Override
     public void salvarControle(Object... valor) {
@@ -15,6 +17,8 @@ public class BairroControle implements InterfaceControle {
         
         //Enviar informações para o DAO
        
+        bd.salvarDao(bm);
+        
     }
 
     @Override
