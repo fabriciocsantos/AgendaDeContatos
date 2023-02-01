@@ -11,7 +11,13 @@ public class BairroControle implements InterfaceControle {
     
     @Override
     public void salvarControle(Object... valor) {
-        bm.setId((int)valor[0]);
+        
+        if ("".equals(valor[0])) {
+            bm.setId(0);
+        }else{
+            bm.setId((int)valor[0]);
+        }
+        
         bm.setDescricao((String)valor[1]);
         bm.setCidade((String)valor[2]);
         

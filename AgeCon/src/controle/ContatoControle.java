@@ -11,7 +11,14 @@ public class ContatoControle implements InterfaceControle {
     
     @Override
     public void salvarControle(Object... valor) {
-        cm.setId((int) valor[0]);
+        
+        if ("".equals(valor[0])) {
+            cm.setId(0);
+        }else{
+            cm.setId((int) valor[0]);
+        }
+        
+        
         cm.setDescricao((String) valor[1]);
         cm.setApelido((String) valor[2]);
         cm.setEmail((String) valor[3]);

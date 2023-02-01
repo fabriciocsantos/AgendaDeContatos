@@ -12,7 +12,13 @@ public class CidadeControle implements InterfaceControle{
     
     @Override
     public void salvarControle(Object... valor) {
-        cim.setId((int)valor[0]);
+        
+        if ("".equals(valor[0])) {
+            cim.setId(0);
+        }else{
+            cim.setId((int)valor[0]);
+        }
+        
         cim.setDescricao((String)valor[1]);
         cim.setUf((String)valor[2]);
         cim.setCep((String)valor[3]);
