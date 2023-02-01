@@ -9,10 +9,7 @@ public class ContatoDao implements InterfaceDao {
 
     @Override
     public void salvarDao(Object... valor) {
-        ContatoModelo cm = (ContatoModelo)valor[0];
-        
-        System.out.println("Toaqui" + cm.getDescricao() + cm.getApelido() + cm.getEmail() + cm.getDdd() + cm.getTelefone());
-        
+        ContatoModelo cm = (ContatoModelo)valor[0];        
     }
 
     @Override
