@@ -23,7 +23,7 @@ public class BairroVisao extends FormPadrao {
         jpnFormulario.add(jlCidade);
         
         jcbCidade = new JTextField();
-        jcbCidade.setBounds(9,80,250,25);
+        jcbCidade.setBounds(9,80,150,25);
         jpnFormulario.add(jcbCidade);
     }
     
