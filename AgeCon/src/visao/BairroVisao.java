@@ -8,8 +8,8 @@ import javax.swing.table.DefaultTableModel;
 
 public class BairroVisao extends FormPadrao {
     
-    JLabel jlBairro;
-    JTextField jcbBairro;
+    JLabel jlCidade;
+    JTextField jcbCidade;
     
     //Construtor
     public BairroVisao(){
@@ -18,13 +18,13 @@ public class BairroVisao extends FormPadrao {
 
     @Override
     public void inicializarComponentes() {
-        jlBairro = new JLabel("Cidade");
-        jlBairro.setBounds(9,60,50,25);
-        jpnFormulario.add(jlBairro);
+        jlCidade = new JLabel("Cidade");
+        jlCidade.setBounds(9,60,50,25);
+        jpnFormulario.add(jlCidade);
         
-        jcbBairro = new JTextField();
-        jcbBairro.setBounds(9,80,250,25);
-        jpnFormulario.add(jcbBairro);
+        jcbCidade = new JTextField();
+        jcbCidade.setBounds(9,80,250,25);
+        jpnFormulario.add(jcbCidade);
     }
     
     //Instancia de controle
@@ -32,7 +32,7 @@ public class BairroVisao extends FormPadrao {
     
     @Override
     public void salvarVisao() {
-     bc.salvarControle(jtfId.getText(), jtfDescricao.getText(), jcbBairro.getText());
+     bc.salvarControle(jtfId.getText(), jtfDescricao.getText(), jcbCidade.getText());
     }
 
     @Override

@@ -3,6 +3,7 @@ package dao;
 import interfaces.InterfaceDao;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import javax.swing.JOptionPane;
 import modelo.CidadeModelo;
 
 public class CidadeDao implements InterfaceDao {
@@ -35,9 +36,10 @@ public class CidadeDao implements InterfaceDao {
             
             stm.execute();            
             stm.close();
+            JOptionPane.showMessageDialog(null,"Registro Gravado!");
 
         }catch(Exception e){
-            
+            JOptionPane.showMessageDialog(null,"Erro. " + e);
         }
     }
 

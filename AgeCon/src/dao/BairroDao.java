@@ -3,6 +3,7 @@ package dao;
 import interfaces.InterfaceDao;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import javax.swing.JOptionPane;
 import modelo.BairroModelo;
 
 public class BairroDao implements InterfaceDao {
@@ -15,16 +16,16 @@ public class BairroDao implements InterfaceDao {
 
         BairroModelo bm = (BairroModelo) valor[0];
 
-        sql = "INSERT INTO bairro (descricao,cidade) VALUES (?,?)";
-        sql = "UPDATE bairro SET descricao=?,cidade=? WHERE id = ?,?";
+        if(bm.getId() == 0){
+            sql = "INSERT INTO bairro (descricao,cidade) VALUES (?,?)";
+        }else{
+            sql = "UPDATE bairro SET descricao=?,cidade=? WHERE id = ?,?";        
+        }       
         
         try{
             
             //Preparando e Manipulando os dados
-            stm = ConexaoBanco.abreConexao().prepareStatement(sql);
-            
-            //Preparando e Manipulando os dados
-            stm = ConexaoBanco.abreConexao().prepareStatement(sql);
+            stm = ConexaoBanco.abreConexao().prepareStatement(sql);                     
             
             stm.setString(1, bm.getDescricao());
             stm.setString(2, bm.getCidade());
@@ -34,9 +35,10 @@ public class BairroDao implements InterfaceDao {
             
             stm.execute(); 
             stm.close();
+            JOptionPane.showMessageDialog(null,"Registro Gravado!");
             
         }catch(Exception e){
-            
+            JOptionPane.showMessageDialog(null,"Erro. " + e);
         }
 
     }
