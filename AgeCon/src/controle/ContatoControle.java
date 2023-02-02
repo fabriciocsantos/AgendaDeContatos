@@ -2,6 +2,9 @@ package controle;
 
 import dao.ContatoDao;
 import interfaces.InterfaceControle;
+import java.util.logging.Logger;
+import java.sql.SQLException;
+import java.util.logging.Level;
 import modelo.ContatoModelo;
 
 public class ContatoControle implements InterfaceControle {
@@ -38,7 +41,11 @@ public class ContatoControle implements InterfaceControle {
 
     @Override
     public void consultarControle(Object... valor) {
-
+        try {
+            cd.consultarDao(valor);
+        } catch(SQLException ex) {
+            Logger.getLogger(TipoContatoControle.class.getName()).log(Level.SEVERE, null, ex);        
+        }
     }
 
 }

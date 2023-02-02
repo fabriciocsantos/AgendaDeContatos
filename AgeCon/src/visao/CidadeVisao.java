@@ -16,6 +16,7 @@ public class CidadeVisao extends FormPadrao{
     //Construtor
     public CidadeVisao(){
         setTitle("Cadastro de Cidade");
+        consultaVisao();
     }
 
     @Override
@@ -61,7 +62,8 @@ public class CidadeVisao extends FormPadrao{
 
     @Override
     public void consultaVisao() {
-
+        modelo.setNumRows(0);
+        cic.consultarControle(jtfConsulta.getText(), modelo);
     }
 
     @Override

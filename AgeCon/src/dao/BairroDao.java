@@ -2,15 +2,18 @@ package dao;
 
 import interfaces.InterfaceDao;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 import modelo.BairroModelo;
 
 public class BairroDao implements InterfaceDao {
 
     String sql;
     PreparedStatement stm;
-
+    ResultSet resultado;
+    
     @Override
     public void salvarDao(Object... valor) {
 
@@ -50,7 +53,27 @@ public class BairroDao implements InterfaceDao {
 
     @Override
     public void consultarDao(Object... valor) throws SQLException {
-
+        DefaultTableModel tabela = (DefaultTableModel) valor[1];
+        
+        if("".equals((String)valor[0])){
+            sql = "SELECT * FROM bairro";
+        }else{
+            sql = "SELECT * FROM bairro WHERE descricao LIKE '%" + valor[0] + "%'";
+        }
+       
+        stm = ConexaoBanco.abreConexao().prepareStatement(sql);   
+        resultado = stm.executeQuery();
+        
+        while(resultado.next()){
+           tabela.addRow(
+                new Object[]{
+                    resultado.getInt("Id"),
+                    resultado.getString("Descricao"),
+                    resultado.getString("Cidade")
+                }
+           );
+        }
+        stm.close();
     }
 
 }

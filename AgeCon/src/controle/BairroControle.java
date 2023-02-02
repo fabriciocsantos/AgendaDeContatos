@@ -2,6 +2,9 @@ package controle;
 
 import dao.BairroDao;
 import interfaces.InterfaceControle;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import modelo.BairroModelo;
 
 public class BairroControle implements InterfaceControle {
@@ -34,7 +37,11 @@ public class BairroControle implements InterfaceControle {
 
     @Override
     public void consultarControle(Object... valor) {
-
-    }
+        try {
+            bd.consultarDao(valor);
+        } catch(SQLException ex) {
+            Logger.getLogger(TipoContatoControle.class.getName()).log(Level.SEVERE, null, ex);        
+        }
+    }   
     
 }

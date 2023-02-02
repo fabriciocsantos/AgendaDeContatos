@@ -14,6 +14,7 @@ public class BairroVisao extends FormPadrao {
     //Construtor
     public BairroVisao(){
         setTitle("Cadastro Bairro");
+        consultaVisao();
     }
 
     @Override
@@ -48,7 +49,8 @@ public class BairroVisao extends FormPadrao {
 
     @Override
     public void consultaVisao() {
-         
+        modelo.setNumRows(0);
+        bc.consultarControle(jtfConsulta.getText(), modelo);
     }
 
     @Override

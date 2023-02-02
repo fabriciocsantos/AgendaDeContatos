@@ -2,6 +2,9 @@ package controle;
 
 import dao.CidadeDao;
 import interfaces.InterfaceControle;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import modelo.CidadeModelo;
 
 
@@ -36,7 +39,11 @@ public class CidadeControle implements InterfaceControle{
 
     @Override
     public void consultarControle(Object... valor) {
-
+        try {
+            cid.consultarDao(valor);
+        } catch(SQLException ex) {
+            Logger.getLogger(TipoContatoControle.class.getName()).log(Level.SEVERE, null, ex);        
+        }
     }
     
 }

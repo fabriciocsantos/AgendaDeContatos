@@ -22,6 +22,7 @@ public class ContatoVisao extends FormPadrao {
     //Construtor
     public ContatoVisao() {
         setTitle("Cadastro de Contatos");
+        consultaVisao();
     }
 
     @Override
@@ -85,7 +86,8 @@ public class ContatoVisao extends FormPadrao {
 
     @Override
     public void consultaVisao() {
-  
+        modelo.setNumRows(0);
+        cc.consultarControle(jtfConsulta.getText(), modelo);
     }
 
     @Override
