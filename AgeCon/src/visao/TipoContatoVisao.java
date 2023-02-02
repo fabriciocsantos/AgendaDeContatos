@@ -53,4 +53,4 @@ public class TipoContatoVisao extends FormPadrao {
     public void excluirVisao() {
         tcc.excluirControle(Integer.parseInt(jtfId.getText()));
     }
-    }
+}
