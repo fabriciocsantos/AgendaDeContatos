@@ -56,7 +56,7 @@ public class BairroVisao extends FormPadrao {
     public void atualizarFormulario() {
         jtfId.setText((String) tabela.getValueAt(tabela.getSelectedRow(), 0).toString());
         jtfDescricao.setText((String) tabela.getValueAt(tabela.getSelectedRow(), 1).toString());
-        jtfDescricao.setText((String) tabela.getValueAt(tabela.getSelectedRow(), 2).toString());
+        jcbCidade.setText((String) tabela.getValueAt(tabela.getSelectedRow(), 2).toString());
 
     }
 
