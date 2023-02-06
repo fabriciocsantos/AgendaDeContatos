@@ -7,11 +7,11 @@ import javax.swing.table.DefaultTableModel;
 
 public class CidadeVisao extends FormPadrao {
 
-    JLabel jlUf;
-    JLabel jlCep;
+    public JLabel jlUf;
+    public JLabel jlCep;
 
-    JTextField jcbUf;
-    JTextField jtfCep;
+    public JTextField jcbUf;
+    public JTextField jtfCep;
 
     //Construtor
     public CidadeVisao() {

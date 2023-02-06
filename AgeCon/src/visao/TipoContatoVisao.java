@@ -8,7 +8,7 @@ public class TipoContatoVisao extends FormPadrao {
 
     
     //Construtor
-    public TipoContatoVisao() {
+    public TipoContatoVisao(){
         setTitle("Cadastro de Tipo de contato");
         consultaVisao();
     }
@@ -30,8 +30,8 @@ public class TipoContatoVisao extends FormPadrao {
     public void criarTabela() {
         tabela = utilTabela.criarTabela(
                 jpnConsulta,
-                new Object[]{60, 620},
-                new Object[]{"centro", "esquerda"},
+                new Object[] {60, 620},
+                new Object[]{"centro","esquerda"}, 
                 new Object[]{"ID", "Descrição"}
         );
         modelo = (DefaultTableModel) tabela.getModel();
@@ -45,8 +45,8 @@ public class TipoContatoVisao extends FormPadrao {
 
     @Override
     public void atualizarFormulario() {
-        jtfId.setText((String) tabela.getValueAt(tabela.getSelectedRow(), 0).toString());
-        jtfDescricao.setText((String) tabela.getValueAt(tabela.getSelectedRow(), 1).toString());
+        jtfId.setText((String)tabela.getValueAt(tabela.getSelectedRow(),0).toString());
+        jtfDescricao.setText((String)tabela.getValueAt(tabela.getSelectedRow(),1).toString());
     }
 
     @Override

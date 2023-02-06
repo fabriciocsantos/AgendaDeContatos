@@ -7,8 +7,8 @@ import javax.swing.table.DefaultTableModel;
 
 public class BairroVisao extends FormPadrao {
 
-    JLabel jlCidade;
-    JTextField jcbCidade;
+    public JLabel jlCidade;
+    public JTextField jcbCidade;
 
     //Construtor
     public BairroVisao() {

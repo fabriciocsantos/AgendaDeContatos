@@ -7,17 +7,17 @@ import javax.swing.table.DefaultTableModel;
 
 public class ContatoVisao extends FormPadrao {
 
-    JLabel jlApelido;
-    JTextField jtfApelido;
+    public JLabel jlApelido;
+    public JTextField jtfApelido;
 
-    JLabel jlEmail;
-    JTextField jtfEmail;
+    public JLabel jlEmail;
+    public JTextField jtfEmail;
 
-    JLabel jlDdd;
-    JTextField jtfDdd;
+    public JLabel jlDdd;
+    public JTextField jtfDdd;
 
-    JLabel jlTelefone;
-    JTextField jtfTelefone;
+    public JLabel jlTelefone;
+    public JTextField jtfTelefone;
 
     //Construtor
     public ContatoVisao() {
