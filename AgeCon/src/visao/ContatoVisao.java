@@ -118,6 +118,10 @@ public class ContatoVisao extends FormPadrao {
     @Override
     void limpaCampos() {
         jtfDescricao.setText("");
+        jtfApelido.setText("");
+        jtfEmail.setText("");
+        jtfDdd.setText("");
+        jtfTelefone.setText("");
     }
 
 }

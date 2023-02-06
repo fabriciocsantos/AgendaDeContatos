@@ -38,13 +38,13 @@ abstract public class FormPadrao extends javax.swing.JInternalFrame {
     //Construtor
     public FormPadrao() {
         initComponents();
-        
+        inicializarComponentes();
         habilitaBotoes(true);
         
         jtfId.setEnabled(false);
         habilitaCampos(false);
         
-        inicializarComponentes();
+        
         criarTabela();  
         
         // jLabel - Consulta

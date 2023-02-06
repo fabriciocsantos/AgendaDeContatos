@@ -99,11 +99,15 @@ public class CidadeVisao extends FormPadrao {
     void habilitaCampos(boolean estado) {
         jtfDescricao.setEnabled(estado);
         jcbUf.setEnabled(estado); 
+        jtfCep.setEnabled(estado); 
+        
     }
 
     @Override
     void limpaCampos() {
         jtfDescricao.setText("");
+        jcbUf.setText("");
+        jtfCep.setText("");
     }
 
 }

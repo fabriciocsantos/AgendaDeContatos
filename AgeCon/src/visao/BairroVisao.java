@@ -74,6 +74,7 @@ public class BairroVisao extends FormPadrao {
     @Override
     void limpaCampos() {
         jtfDescricao.setText("");
+        jcbCidade.setText("");
     }
 
 }
