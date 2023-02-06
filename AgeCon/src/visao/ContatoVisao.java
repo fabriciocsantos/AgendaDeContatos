@@ -103,7 +103,7 @@ public class ContatoVisao extends FormPadrao {
 
     @Override
     public void excluirVisao() {
-
+        cc.excluirControle(Integer.parseInt(jtfId.getText()));
     }
     
 }

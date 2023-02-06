@@ -77,6 +77,6 @@ public class CidadeVisao extends FormPadrao {
 
     @Override
     public void excluirVisao() {
-
+       cic.excluirControle(Integer.parseInt(jtfId.getText()));
     } 
 }

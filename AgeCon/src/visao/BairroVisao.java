@@ -62,7 +62,7 @@ public class BairroVisao extends FormPadrao {
 
     @Override
     public void excluirVisao() {
-
+        bc.excluirControle(Integer.parseInt(jtfId.getText()));
     }
     
 }

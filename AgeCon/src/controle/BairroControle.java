@@ -32,7 +32,7 @@ public class BairroControle implements InterfaceControle {
 
     @Override
     public void excluirControle(int id) {
-
+        bd.excluirDao(id);
     }
 
     @Override

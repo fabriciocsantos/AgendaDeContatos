@@ -36,7 +36,7 @@ public class ContatoControle implements InterfaceControle {
 
     @Override
     public void excluirControle(int id) {
-
+        cd.excluirDao(id);
     }
 
     @Override

@@ -34,7 +34,7 @@ public class CidadeControle implements InterfaceControle{
 
     @Override
     public void excluirControle(int id) {
-
+        cid.excluirDao(id);
     }
 
     @Override
