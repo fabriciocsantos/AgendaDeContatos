@@ -18,7 +18,7 @@ public class BairroControle implements InterfaceControle {
         if ("".equals(valor[0])) {
             bm.setId(0);
         }else{
-            bm.setId((int)valor[0]);
+            bm.setId(Integer.parseInt(valor[0].toString()));
         }
         
         bm.setDescricao((String)valor[1]);

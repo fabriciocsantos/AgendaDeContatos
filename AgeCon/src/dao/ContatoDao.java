@@ -24,7 +24,7 @@ public class ContatoDao implements InterfaceDao {
         if(cm.getId() == 0){
              sql = "INSERT INTO contato (descricao,apelido,email,ddd,telefone) VALUES (?,?,?,?,?)";
         }else{
-            sql = "UPDATE contato SET descricao=?,apelido=?,email=?,ddd=?,telefone=? WHERE id  = ?,?,?,?,?";
+            sql = "UPDATE contato SET descricao=?,apelido=?,email=?,ddd=?,telefone=? WHERE id  = ?";
         }
         
         try{

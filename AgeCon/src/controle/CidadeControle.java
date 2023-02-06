@@ -19,7 +19,7 @@ public class CidadeControle implements InterfaceControle{
         if ("".equals(valor[0])) {
             cim.setId(0);
         }else{
-            cim.setId((int)valor[0]);
+            cim.setId(Integer.parseInt(valor[0].toString()));
         }
         
         cim.setDescricao((String)valor[1]);

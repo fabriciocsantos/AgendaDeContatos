@@ -18,7 +18,7 @@ public class ContatoControle implements InterfaceControle {
         if ("".equals(valor[0])) {
             cm.setId(0);
         }else{
-            cm.setId((int) valor[0]);
+            cm.setId(Integer.parseInt(valor[0].toString()));
         }
         
         

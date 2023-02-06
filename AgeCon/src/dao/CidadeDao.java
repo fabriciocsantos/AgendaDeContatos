@@ -22,7 +22,7 @@ public class CidadeDao implements InterfaceDao {
         if(cim.getId() == 0){
             sql = "INSERT INTO cidade (descricao,uf,cep) VALUES (?,?,?)";
         }else{
-            sql = "UPDATE cidade SET descricao=?,uf=?,cep=? WHERE id = ?,?,?";
+            sql = "UPDATE cidade SET descricao=?,uf=?,cep=? WHERE id = ?";
         }
         
         try{

@@ -22,7 +22,7 @@ public class BairroDao implements InterfaceDao {
         if(bm.getId() == 0){
             sql = "INSERT INTO bairro (descricao,cidade) VALUES (?,?)";
         }else{
-            sql = "UPDATE bairro SET descricao=?,cidade=? WHERE id = ?,?";        
+            sql = "UPDATE bairro SET descricao=?,cidade=? WHERE id = ?";        
         }       
         
         try{
