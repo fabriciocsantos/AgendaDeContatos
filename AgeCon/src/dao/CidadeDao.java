@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import modelo.CidadeModelo;
+import util.ValidarCampo;
 
 public class CidadeDao implements InterfaceDao {
 
@@ -66,7 +67,9 @@ public class CidadeDao implements InterfaceDao {
     @Override
     public void consultarDao(Object... valor) throws SQLException {
         DefaultTableModel tabela = (DefaultTableModel) valor[1];
-
+        
+        ValidarCampo validacaoDao = new ValidarCampo();
+        
         if ("".equals((String) valor[0])) {
             sql = "SELECT * FROM cidade";
         } else {
@@ -82,7 +85,7 @@ public class CidadeDao implements InterfaceDao {
                         resultado.getInt("Id"),
                         resultado.getString("Descricao"),
                         resultado.getString("Uf"),
-                        resultado.getString("Cep")
+                        validacaoDao.inserirMascaraCep( resultado.getInt("Cep")) 
                     }
             );
         }

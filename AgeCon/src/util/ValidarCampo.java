@@ -31,5 +31,11 @@ public class ValidarCampo {
         cepInt = cep.toString().substring(0, 5) + cep.toString().substring(6, 9);
         return Integer.parseInt(cepInt);
     }
+    
+    public String inserirMascaraCep(Integer cep) {
+        String cepMasc;
+        cepMasc = cep.toString().substring(0, 5) + ("-") + cep.toString().substring(5, 8);
+        return (cepMasc);
+    }
 
 }
