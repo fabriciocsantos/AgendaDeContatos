@@ -65,4 +65,15 @@ public class BairroVisao extends FormPadrao {
         bc.excluirControle(Integer.parseInt(jtfId.getText()));
     }
 
+    @Override
+    void habilitaCampos(boolean estado) {
+        jtfDescricao.setEnabled(estado);
+        jcbCidade.setEnabled(estado);
+    }
+
+    @Override
+    void limpaCampos() {
+        jtfDescricao.setText("");
+    }
+
 }

@@ -21,6 +21,8 @@ abstract public class FormPadrao extends javax.swing.JInternalFrame {
     abstract public void consultaVisao();
     abstract public void atualizarFormulario(); 
     abstract public void excluirVisao();
+    abstract void habilitaCampos(boolean estado);
+    abstract void limpaCampos();
         
     //Atributos para criação da tabela
     JTable tabela;  
@@ -319,16 +321,6 @@ abstract public class FormPadrao extends javax.swing.JInternalFrame {
         
         jbSalvar.setEnabled(!estado);
         jbCancelar.setEnabled(!estado);
-    }
-    
-    //Método para habilitar e desabilitar acesso aos campos de edição.
-    public void habilitaCampos(boolean estado){ 
-        jtfDescricao.setEnabled(estado);
-    }
-    
-    //Método para limpar os campos do formulario
-    public void limpaCampos(){
-        jtfDescricao.setText("");
     }
      
     // Variables declaration - do not modify//GEN-BEGIN:variables

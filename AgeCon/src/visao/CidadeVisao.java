@@ -51,17 +51,17 @@ public class CidadeVisao extends FormPadrao {
     @Override
     public void salvarVisao() {
         ValidarCampo validacaoVisao = new ValidarCampo();
-        
+
         jtfCep = validacaoVisao.validarCep(jtfCep);
-        
-        if(jtfCep.getForeground().equals(Color.red)){
+
+        if (jtfCep.getForeground().equals(Color.red)) {
             JOptionPane.showMessageDialog(this, "CEP inválido.");
             jtfCep.requestFocus();
             return;
         }
-        
+
         cic.salvarControle(jtfId.getText(), jtfDescricao.getText(), jcbUf.getText(),
-        validacaoVisao.ajustaCepInt(jtfCep.getText()) );
+                validacaoVisao.ajustaCepInt(jtfCep.getText()));
     }
 
     @Override
@@ -79,7 +79,7 @@ public class CidadeVisao extends FormPadrao {
     public void consultaVisao() {
         modelo.setNumRows(0);
         cic.consultarControle(jtfConsulta.getText(), modelo);
-        
+
     }
 
     @Override
@@ -94,6 +94,16 @@ public class CidadeVisao extends FormPadrao {
     public void excluirVisao() {
         cic.excluirControle(Integer.parseInt(jtfId.getText()));
     }
-    
-    
+
+    @Override
+    void habilitaCampos(boolean estado) {
+        jtfDescricao.setEnabled(estado);
+        jcbUf.setEnabled(estado); 
+    }
+
+    @Override
+    void limpaCampos() {
+        jtfDescricao.setText("");
+    }
+
 }
