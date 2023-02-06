@@ -9,7 +9,7 @@ public class BairroVisao extends FormPadrao {
 
     JLabel jlCidade;
     JTextField jcbCidade;
-    
+
     //Construtor
     public BairroVisao() {
         setTitle("Cadastro Bairro");
@@ -64,5 +64,5 @@ public class BairroVisao extends FormPadrao {
     public void excluirVisao() {
         bc.excluirControle(Integer.parseInt(jtfId.getText()));
     }
-    
+
 }

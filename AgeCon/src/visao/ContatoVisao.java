@@ -34,7 +34,7 @@ public class ContatoVisao extends FormPadrao {
 
         jtfApelido = new JTextField();
         jtfApelido.setBounds(9, 80, 250, 25);
-        jpnFormulario.add(jtfApelido);
+        jpnFormulario.add(jtfApelido);       
 
         //Email
         jlEmail = new JLabel("Email");
@@ -105,5 +105,5 @@ public class ContatoVisao extends FormPadrao {
     public void excluirVisao() {
         cc.excluirControle(Integer.parseInt(jtfId.getText()));
     }
-    
+  
 }

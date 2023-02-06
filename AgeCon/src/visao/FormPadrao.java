@@ -20,8 +20,8 @@ abstract public class FormPadrao extends javax.swing.JInternalFrame {
     abstract public void criarTabela();
     abstract public void consultaVisao();
     abstract public void atualizarFormulario(); 
-    abstract public void excluirVisao();   
-     
+    abstract public void excluirVisao();
+        
     //Atributos para criação da tabela
     JTable tabela;  
     DefaultTableModel modelo = new DefaultTableModel();
@@ -188,6 +188,12 @@ abstract public class FormPadrao extends javax.swing.JInternalFrame {
 
         jLabel2.setText("Descrição");
 
+        jtfDescricao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtfDescricaoActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jpnFormularioLayout = new javax.swing.GroupLayout(jpnFormulario);
         jpnFormulario.setLayout(jpnFormularioLayout);
         jpnFormularioLayout.setHorizontalGroup(
@@ -300,6 +306,10 @@ abstract public class FormPadrao extends javax.swing.JInternalFrame {
         }
         
     }//GEN-LAST:event_jbExcluirActionPerformed
+
+    private void jtfDescricaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfDescricaoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtfDescricaoActionPerformed
     
     //Método para habilitar e desabilitar botões.
     public void habilitaBotoes(boolean estado){
@@ -312,7 +322,7 @@ abstract public class FormPadrao extends javax.swing.JInternalFrame {
     }
     
     //Método para habilitar e desabilitar acesso aos campos de edição.
-    public void habilitaCampos(boolean estado){       
+    public void habilitaCampos(boolean estado){ 
         jtfDescricao.setEnabled(estado);
     }
     
