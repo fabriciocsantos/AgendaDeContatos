@@ -32,7 +32,7 @@ public class CidadeDao implements InterfaceDao {
 
             stm.setString(1, cim.getDescricao());
             stm.setString(2, cim.getUf());
-            stm.setString(3, cim.getCep());
+            stm.setInt(3, cim.getCep());
 
             if (cim.getId() > 0) {
                 stm.setInt(4, cim.getId());

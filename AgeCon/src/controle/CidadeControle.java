@@ -24,7 +24,7 @@ public class CidadeControle implements InterfaceControle{
         
         cim.setDescricao((String)valor[1]);
         cim.setUf((String)valor[2]);
-        cim.setCep((String)valor[3]);
+        cim.setCep((Integer)valor[3]);
         
         //Enviar informações para o DAO
         

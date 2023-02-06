@@ -1,9 +1,12 @@
 package visao;
 
 import controle.CidadeControle;
+import java.awt.Color;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
+import util.ValidarCampo;
 
 public class CidadeVisao extends FormPadrao {
 
@@ -47,7 +50,18 @@ public class CidadeVisao extends FormPadrao {
 
     @Override
     public void salvarVisao() {
-        cic.salvarControle(jtfId.getText(), jtfDescricao.getText(), jcbUf.getText(), jtfCep.getText());
+        ValidarCampo validacao = new ValidarCampo();
+        
+        jtfCep = validacao.validarCep(jtfCep);
+        
+        if(jtfCep.getForeground().equals(Color.red)){
+            JOptionPane.showMessageDialog(this, "CEP inválido.");
+            jtfCep.requestFocus();
+            return;
+        }
+        
+        cic.salvarControle(jtfId.getText(), jtfDescricao.getText(), jcbUf.getText(),
+        validacao.ajustaCepInt(jtfCep.getText()) );
     }
 
     @Override
@@ -79,4 +93,6 @@ public class CidadeVisao extends FormPadrao {
     public void excluirVisao() {
         cic.excluirControle(Integer.parseInt(jtfId.getText()));
     }
+    
+    
 }

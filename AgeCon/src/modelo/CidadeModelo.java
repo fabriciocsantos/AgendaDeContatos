@@ -5,7 +5,7 @@ public class CidadeModelo {
     private int id;
     private String descricao;
     private String uf;
-    private String cep;
+    private Integer cep;
 
     public int getId() {
         return id;
@@ -31,13 +31,15 @@ public class CidadeModelo {
         this.uf = uf;
     }
 
-    public String getCep() {
+    public Integer getCep() {
         return cep;
     }
 
-    public void setCep(String cep) {
+    public void setCep(Integer cep) {
         this.cep = cep;
     }
+
+    
     
     
 }
