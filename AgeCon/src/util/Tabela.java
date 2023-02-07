@@ -18,7 +18,7 @@ public class Tabela {
         
         JTable tabela = new JTable(new DefaultTableModel());
         tabela.setVisible(true);
-        
+
         DefaultTableModel modeloTabela = (DefaultTableModel) tabela.getModel();    
 
     
