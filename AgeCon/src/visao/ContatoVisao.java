@@ -18,7 +18,7 @@ public class ContatoVisao extends FormPadrao {
 
     public JLabel jlTelefone;
     public JTextField jtfTelefone;
-
+    
     //Construtor
     public ContatoVisao() {
         setTitle("Cadastro de Contatos");
@@ -61,8 +61,7 @@ public class ContatoVisao extends FormPadrao {
 
         jtfTelefone = new JTextField();
         jtfTelefone.setBounds(100, 130, 150, 25);
-        jpnFormulario.add(jtfTelefone);
-
+        jpnFormulario.add(jtfTelefone);       
     }
 
     //Instancia de Controle
@@ -97,8 +96,7 @@ public class ContatoVisao extends FormPadrao {
         jtfApelido.setText((String) tabela.getValueAt(tabela.getSelectedRow(), 2).toString());
         jtfEmail.setText((String) tabela.getValueAt(tabela.getSelectedRow(), 3).toString());
         jtfDdd.setText((String) tabela.getValueAt(tabela.getSelectedRow(), 4).toString());
-        jtfTelefone.setText((String) tabela.getValueAt(tabela.getSelectedRow(), 5).toString());
-
+        jtfTelefone.setText((String) tabela.getValueAt(tabela.getSelectedRow(), 5).toString());        
     }
 
     @Override

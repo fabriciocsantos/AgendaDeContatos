@@ -40,7 +40,7 @@ public class ContatoModelo {
     public void setEmail(String Email) {
         this.Email = Email;
     }
-
+    
     public String getDdd() {
         return Ddd;
     }
