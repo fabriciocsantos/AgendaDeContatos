@@ -275,8 +275,10 @@ abstract public class FormPadrao extends javax.swing.JInternalFrame {
     private void jbNovoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbNovoActionPerformed
         habilitaBotoes(false);
         habilitaCampos(true);
-        
+                
         limpaCampos();
+        jtfId.setText("");
+        
         jtfDescricao.requestFocus();
     }//GEN-LAST:event_jbNovoActionPerformed
 
