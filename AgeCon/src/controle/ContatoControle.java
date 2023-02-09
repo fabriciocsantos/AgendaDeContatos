@@ -27,6 +27,7 @@ public class ContatoControle implements InterfaceControle {
         cm.setEmail((String) valor[3]);
         cm.setDdd((String) valor[4]);
         cm.setTelefone((String) valor[5]);
+        cm.setIdCidade((Integer) valor[6]);
         
         //Enviar informações para o DAO
         

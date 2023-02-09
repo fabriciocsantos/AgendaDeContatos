@@ -36,9 +36,10 @@ public class ContatoDao implements InterfaceDao {
             stm.setString(3, cm.getEmail());
             stm.setString(4, cm.getDdd());
             stm.setString(5, cm.getTelefone());
+            stm.setInt(6,cm.getIdCidade());
 
             if (cm.getId() > 0) {
-                stm.setInt(6, cm.getId());
+                stm.setInt(7, cm.getId());
             }
 
             stm.execute();
