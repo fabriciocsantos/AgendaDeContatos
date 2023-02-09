@@ -33,6 +33,8 @@ public class ContatoDao implements InterfaceDao {
 //        if(idCidadeRef.equals(cim.getDescricao())){
 //            cm.setIdCidade(cim.getId());
 //        }
+//      
+//          tentar colocar antes dos inserts
         
         try {
 
