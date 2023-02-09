@@ -35,6 +35,7 @@ public class ContatoDao implements InterfaceDao {
 //        }
 //      
 //          tentar colocar antes dos inserts
+//          tentar ao inves de passar o nome da cidade passar o cep
         
         try {
 
