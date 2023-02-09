@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+import modelo.CidadeModelo;
 import modelo.ContatoModelo;
 
 public class ContatoDao implements InterfaceDao {
@@ -18,14 +19,21 @@ public class ContatoDao implements InterfaceDao {
     public void salvarDao(Object... valor) {
 
         ContatoModelo cm = (ContatoModelo) valor[0];
+        CidadeModelo cim = new CidadeModelo();
 
         //Alteração ou inclusão
         if (cm.getId() == 0) {
-            sql = "INSERT INTO contato (descricao,apelido,email,ddd,telefone) VALUES (?,?,?,?,?)";
+            sql = "INSERT INTO contato (descricao,apelido,email,ddd,telefone,idCidade) VALUES (?,?,?,?,?,?)";          
         } else {
-            sql = "UPDATE contato SET descricao=?,apelido=?,email=?,ddd=?,telefone=? WHERE id  = ?";
+            sql = "UPDATE contato SET descricao=?,apelido=?,email=?,ddd=?,telefone=?,idCidade=? WHERE id  = ?";
         }
-
+        
+//        String idCidadeRef = String.valueOf(cm.getIdCidade());
+//        
+//        if(idCidadeRef.equals(cim.getDescricao())){
+//            cm.setIdCidade(cim.getId());
+//        }
+        
         try {
 
             //Preparando e Manipulando os dados
@@ -37,13 +45,14 @@ public class ContatoDao implements InterfaceDao {
             stm.setString(4, cm.getDdd());
             stm.setString(5, cm.getTelefone());
             stm.setInt(6,cm.getIdCidade());
-
+            
             if (cm.getId() > 0) {
                 stm.setInt(7, cm.getId());
             }
 
             stm.execute();
             stm.close();
+            
             JOptionPane.showMessageDialog(null, "Registro Gravado!");
 
         } catch (Exception e) {
@@ -89,12 +98,13 @@ public class ContatoDao implements InterfaceDao {
                         resultado.getString("Descricao"),
                         resultado.getString("Apelido"),
                         resultado.getString("Email"),
+                        resultado.getString("idCidade"),
                         resultado.getString("Ddd"),
                         resultado.getString("Telefone")
                     }
             );
-        }
-        stm.close();
+        }                    
+        stm.close();              
     }
 
 }

@@ -1,7 +1,6 @@
 package visao;
 
 import controle.ContatoControle;
-import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
@@ -21,7 +20,7 @@ public class ContatoVisao extends FormPadrao {
     public JTextField jtfTelefone;
     
     public JLabel jlIdCidade;
-    public JComboBox jcbIdCidade;
+    public JTextField jtfIdCidade;
     
     
     //Construtor
@@ -73,24 +72,24 @@ public class ContatoVisao extends FormPadrao {
         jlIdCidade.setBounds(300, 110, 50, 25);
         jpnFormulario.add(jlIdCidade);
 
-        jcbIdCidade = new JComboBox();
-        jcbIdCidade.setBounds(300, 130, 150, 25);
-        jpnFormulario.add(jcbIdCidade);
+        jtfIdCidade = new JTextField();
+        jtfIdCidade.setBounds(300, 130, 150, 25);
+        jpnFormulario.add(jtfIdCidade);
     }
 
     //Instancia de Controle
     ContatoControle cc = new ContatoControle();
 
     @Override
-    public void salvarVisao() {     
-        cc.salvarControle(jtfId.getText(), jtfDescricao.getText(), jtfApelido.getText(), jtfEmail.getText(), jtfDdd.getText(), jtfTelefone.getText());
+    public void salvarVisao() {
+        cc.salvarControle(jtfId.getText(), jtfDescricao.getText(), jtfApelido.getText(), jtfEmail.getText(), jtfDdd.getText(), jtfTelefone.getText(), jtfIdCidade.getText());
     }
 
     @Override
     public void criarTabela() {
         tabela = utilTabela.criarTabela(
                 jpnConsulta,
-                new Object[]{60, 200, 100, 150, 150, 50, 150},
+                new Object[]{60, 200, 100, 150, 50, 50, 150},
                 new Object[]{"centro", "esquerda", "esquerda", "esquerda", "esquerda", "esquerda", "esquerda"},
                 new Object[]{"ID", "Descrição", "Apelido", "Email", "IdCidade", "DDD", "Telefone"}
         );
@@ -111,6 +110,7 @@ public class ContatoVisao extends FormPadrao {
         jtfEmail.setText((String) tabela.getValueAt(tabela.getSelectedRow(), 3).toString());
         jtfDdd.setText((String) tabela.getValueAt(tabela.getSelectedRow(), 4).toString());
         jtfTelefone.setText((String) tabela.getValueAt(tabela.getSelectedRow(), 5).toString()); 
+        jtfIdCidade.setText((String) tabela.getValueAt(tabela.getSelectedRow(), 6).toString());
     }
 
     @Override
@@ -125,7 +125,7 @@ public class ContatoVisao extends FormPadrao {
         jtfEmail.setEnabled(estado);
         jtfDdd.setEnabled(estado);
         jtfTelefone.setEnabled(estado);
-        jcbIdCidade.setEnabled(estado);
+        jtfIdCidade.setEnabled(estado);
     }
 
     @Override
@@ -135,6 +135,7 @@ public class ContatoVisao extends FormPadrao {
         jtfEmail.setText("");
         jtfDdd.setText("");
         jtfTelefone.setText("");
+        jtfIdCidade.setText("");
     }
 
 }

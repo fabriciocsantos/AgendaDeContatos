@@ -8,7 +8,7 @@ public class ContatoModelo {
     private String Email;
     private String Ddd;
     private String Telefone;
-    private Integer IdCidade;
+    private int IdCidade;
 
     public int getId() {
         return id;
@@ -58,11 +58,11 @@ public class ContatoModelo {
         this.Telefone = Telefone;
     }
 
-    public Integer getIdCidade() {
+    public int getIdCidade() {
         return IdCidade;
     }
 
-    public void setIdCidade(Integer IdCidade) {
+    public void setIdCidade(int IdCidade) {
         this.IdCidade = IdCidade;
     }
        
