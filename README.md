@@ -2,7 +2,7 @@
  <h1> Agecon </h1> Agenda De Contatos 📱
  <h3> Projeto totalmente em Java utilizando Swing e banco de dados MYSQL </h3>
  
- Esse projeto foi feito com ajuda do canal do Professor Crenilson https://www.youtube.com/@ProfessorCrenilson, por mais que no canal dele não está completo eu mesmo complementei e modifiquei os aspectos necessários.
+ Esse projeto foi feito com ajuda do canal do Professor Crenilson https://www.youtube.com/@ProfessorCrenilson, por mais que no canal dele não está completo eu mesmo complementei e modifiquei os aspectos necessários. Projeto  de iniciante feito totalmente para aprendizado
  
  Segue abaixo fotos do projeto
 
