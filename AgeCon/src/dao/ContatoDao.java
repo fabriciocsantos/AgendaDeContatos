@@ -6,7 +6,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
-import modelo.CidadeModelo;
 import modelo.ContatoModelo;
 
 public class ContatoDao implements InterfaceDao {
@@ -19,24 +18,14 @@ public class ContatoDao implements InterfaceDao {
     public void salvarDao(Object... valor) {
 
         ContatoModelo cm = (ContatoModelo) valor[0];
-        CidadeModelo cim = new CidadeModelo();
-
+                      
         //Alteração ou inclusão
-        if (cm.getId() == 0) {
+        if (cm.getId() == 0) {                
             sql = "INSERT INTO contato (descricao,apelido,email,ddd,telefone,idCidade) VALUES (?,?,?,?,?,?)";          
         } else {
             sql = "UPDATE contato SET descricao=?,apelido=?,email=?,ddd=?,telefone=?,idCidade=? WHERE id  = ?";
         }
-        
-//        String idCidadeRef = String.valueOf(cm.getIdCidade());
-//        
-//        if(idCidadeRef.equals(cim.getDescricao())){
-//            cm.setIdCidade(cim.getId());
-//        }
-//      
-//          tentar colocar antes dos inserts
-//          tentar ao inves de passar o nome da cidade passar o cep
-        
+         
         try {
 
             //Preparando e Manipulando os dados
@@ -85,10 +74,16 @@ public class ContatoDao implements InterfaceDao {
 
         DefaultTableModel tabela = (DefaultTableModel) valor[1];
 
-        if ("".equals((String) valor[0])) {
-            sql = "SELECT * FROM contato";
+        if ("".equals((String) valor[0])) {        
+                sql = "SELECT con.Id Id, con.Descricao Descricao, con.Apelido Apelido, con.Email Email,"
+                    + " con.Ddd Ddd, con.Telefone Telefone, cid.descricao descCidade FROM bancoagendacontatos.contato con"
+                    + " left join bancoagendacontatos.cidade cid on con.idcidade = cid.id";                      
         } else {
-            sql = "SELECT * FROM contato WHERE descricao LIKE '%" + valor[0] + "%'";
+            sql = "SELECT con.Id Id, con.Descricao Descricao, con.Apelido Apelido, con.Email Email,"
+                    + " con.Ddd Ddd, con.Telefone Telefone,cid.descricao descCidade "
+                    + " FROM bancoagendacontatos.contato con"
+                    + " left join bancoagendacontatos.cidade cid on con.idcidade = cid.id"
+                    + " WHERE con.Descricao LIKE '%" + valor[0] + "%'";
         }
 
         stm = ConexaoBanco.abreConexao().prepareStatement(sql);
@@ -101,9 +96,9 @@ public class ContatoDao implements InterfaceDao {
                         resultado.getString("Descricao"),
                         resultado.getString("Apelido"),
                         resultado.getString("Email"),
-                        resultado.getString("idCidade"),
                         resultado.getString("Ddd"),
-                        resultado.getString("Telefone")
+                        resultado.getString("Telefone"),
+                        resultado.getString("descCidade")
                     }
             );
         }                    

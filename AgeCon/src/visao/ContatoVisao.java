@@ -68,7 +68,7 @@ public class ContatoVisao extends FormPadrao {
         jpnFormulario.add(jtfTelefone);
         
         //IdCidade
-        jlIdCidade = new JLabel("Cidade");
+        jlIdCidade = new JLabel("IdCidade");
         jlIdCidade.setBounds(300, 110, 50, 25);
         jpnFormulario.add(jlIdCidade);
 
@@ -89,9 +89,9 @@ public class ContatoVisao extends FormPadrao {
     public void criarTabela() {
         tabela = utilTabela.criarTabela(
                 jpnConsulta,
-                new Object[]{60, 200, 100, 150, 50, 50, 150},
+                new Object[]{60, 200, 100, 150, 50, 150, 150},
                 new Object[]{"centro", "esquerda", "esquerda", "esquerda", "esquerda", "esquerda", "esquerda"},
-                new Object[]{"ID", "Descrição", "Apelido", "Email", "IdCidade", "DDD", "Telefone"}
+                new Object[]{"ID", "Descrição", "Apelido", "Email", "DDD", "Telefone", "Cidade"}
         );
         modelo = (DefaultTableModel) tabela.getModel();
     }
